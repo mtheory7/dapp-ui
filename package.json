@@ -2,7 +2,7 @@
   "name": "new-ui",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/mtheory7/dapp-ui",
+  "homepage": "https://mtheory7.github.io/dapp-ui",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.1.1",
