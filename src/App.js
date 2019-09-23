@@ -13,7 +13,7 @@ function App() {
           onClick={() => {
             console.log(account[0]);
             window.web3.eth.sendTransaction({
-              to:"0x76534516B97564626D191aB72aFbf056B9421e64",
+              to:"0x000000000ce9873e7ba322d68c75bf50d7c7bb76",
               from:account[0],
               value:window.web3.toWei(0.01, "ether"),
               gasPrice:"20000000000",
