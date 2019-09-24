@@ -107,12 +107,7 @@ function App() {
     }];
     const contract = new window.web3.eth.Contract(contractABI,
         "0xF32B2d84C8a8924cfF3D8D2F2D8635c089a2427D");
-    contract.methods.getMetalBalance("GOLD").call({
-          from: account[0]
-        },
-        function (error, result) {
-        }).then(console.log);
-
+    contract.methods.getMetalBalance("GOLD").call({from: account[0]}, function (error, result){}).then(console.log);
   }
 
   return (
@@ -124,7 +119,7 @@ function App() {
                     window.web3.eth.sendTransaction({
                       to: "0x000000000ce9873e7ba322d68c75bf50d7c7bb76",
                       from: account[0],
-                      value: window.web3.utils.fromWei("10000000000000000000", "gwei"),
+                      value: window.web3.utils.toWei("0.01", "ether"),
                       gasPrice: "20000000000",
                       gasLimit: "21000"
                     }, function (err, transactionHash) {
