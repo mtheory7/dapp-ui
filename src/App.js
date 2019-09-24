@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
   const [account, setAccount] = useState("");
+  const [goldBalance, setGoldBalance] = useState("Click to find gold holding amount");
   window.ethereum.enable().then(setAccount);
 
   function callContract() {
@@ -107,7 +108,7 @@ function App() {
     }];
     const contract = new window.web3.eth.Contract(contractABI,
         "0xF32B2d84C8a8924cfF3D8D2F2D8635c089a2427D");
-    contract.methods.getMetalBalance("GOLD").call({from: account[0]}, function (error, result){}).then(console.log);
+    contract.methods.getMetalBalance("GOLD").call({from: account[0]}, function (error, result){}).then(setGoldBalance);
   }
 
   return (
@@ -133,7 +134,7 @@ function App() {
                   onClick={() => {
                     callContract()
                   }
-                  }>HEY!</Button>
+                  }>{goldBalance}</Button>
         </header>
       </div>
   );
