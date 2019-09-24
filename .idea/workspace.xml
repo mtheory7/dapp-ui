@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="044e78a2-9d48-4c96-a129-4f380e957bc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+            <state relative-caret-position="357">
+              <caret line="118" column="27" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -49,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -172,7 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568816327997</updated>
       <workItem from="1568816329515" duration="12513000" />
-      <workItem from="1569270385895" duration="5687000" />
+      <workItem from="1569270385895" duration="8729000" />
     </task>
     <task id="LOCAL-00001" summary="Added homepage">
       <created>1568837491254</created>
@@ -195,11 +193,32 @@
       <option name="project" value="LOCAL" />
       <updated>1569270265546</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Progress. Able to call personal smart contract on Ropsten">
+      <created>1569333637924</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569333637924</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed toWei function">
+      <created>1569333797450</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569333797450</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Can now find gold amount from contract">
+      <created>1569334093937</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569334093937</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22108000" />
+    <option name="totallyTimeSpent" value="25150000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -212,7 +231,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873096" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" sideWeight="0.5011111" side_tool="true" weight="0.25" />
@@ -294,7 +312,10 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Added homepage" />
     <MESSAGE value="Progress. Able to submit transaction for approval now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Progress. Able to submit transaction for approval now" />
+    <MESSAGE value="Progress. Able to call personal smart contract on Ropsten" />
+    <MESSAGE value="Fixed toWei function" />
+    <MESSAGE value="Can now find gold amount from contract" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can now find gold amount from contract" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/favicon.ico">
@@ -335,7 +356,7 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -351,8 +372,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+        <state relative-caret-position="357">
+          <caret line="118" column="27" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
