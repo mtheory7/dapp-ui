@@ -6,12 +6,14 @@ function App() {
   const [account, setAccount] = useState("");
   const [goldBalance, setGoldBalance] = useState(
       "Click to find gold holding amount");
+  const [silverBalance, setSilverBalance] = useState(
+      "Click to find silver holding amount");
   window.ethereum.enable().then(setAccount);
   const contractABI = [{"constant":false,"inputs":[],"name":"acceptOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"metalName","type":"string"},{"internalType":"uint256","name":"newAmount","type":"uint256"}],"name":"updateBalance","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"string","name":"metalName","type":"string"}],"name":"getMetalBalance","outputs":[{"internalType":"uint256","name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"newOwner","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address payable","name":"_newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"metalName","type":"string"}],"name":"MetalBalanceUpdated","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_from","type":"address"},{"indexed":true,"internalType":"address","name":"_to","type":"address"}],"name":"OwnershipTransferred","type":"event"}];
 
   function sendContract() {
     const contract = new window.web3.eth.Contract(contractABI,
-        "0xF32B2d84C8a8924cfF3D8D2F2D8635c089a2427D");
+        "0x4a298490e6a90e80b46c451b51ac83702623b046");
     contract.methods.updateBalance("GOLD", "5500000").send({
       from: account[0],
       gasPrice: 20000000000
@@ -19,12 +21,18 @@ function App() {
     }).then(console.log);
   }
 
-  function callContract() {
+  function callGetBalance(metalName) {
     const contract = new window.web3.eth.Contract(contractABI,
-        "0xF32B2d84C8a8924cfF3D8D2F2D8635c089a2427D");
-    contract.methods.getMetalBalance("GOLD").call({from: account[0]},
-        function (error, result) {
-        }).then(setGoldBalance);
+        "0x4a298490e6a90e80b46c451b51ac83702623b046");
+    if (metalName === 'GOLD') {
+      contract.methods.getMetalBalance(metalName).call({from: account[0]},
+          function (error, result) {
+          }).then(setGoldBalance);
+    } else if (metalName === 'SILVER') {
+      contract.methods.getMetalBalance(metalName).call({from: account[0]},
+          function (error, result) {
+          }).then(setSilverBalance);
+    }
   }
 
   return (
@@ -48,9 +56,14 @@ function App() {
           >{account}</Button>
           <Button variant="outline-primary"
                   onClick={() => {
-                    callContract()
+                    callGetBalance("GOLD")
                   }}
           >{goldBalance}</Button>
+          <Button variant="outline-primary"
+                  onClick={() => {
+                    callGetBalance("SILVER")
+                  }}
+          >{silverBalance}</Button>
           <Button variant="outline-primary"
                   onClick={() => {
                     sendContract()
